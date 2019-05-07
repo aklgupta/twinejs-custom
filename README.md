@@ -1,5 +1,6 @@
 # twinejs-custom
 Minor customization of the tool [twinejs](https://github.com/klembot/twinejs).
+Uses "Twine 2.3.1 Web" as it's base
 
 ## Changes
 - Added more colors for the tags
