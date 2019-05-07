@@ -7053,3 +7053,11 @@ tr.format-item .cantRemove {
 	color: #fff;
 }
 
+#new-tag-select{
+	min-width: 200px;
+	width: 30%;
+	max-width: 500px;
+}
+.passage-tag-list{
+	display: block;
+}

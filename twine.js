@@ -29313,6 +29313,16 @@
 				this.newVisible = !0, this.$nextTick(function () {
 					return t.$els.newName.focus()
 				})
+				setTimeout(()=>{
+					$("#new-tag-select").empty();
+					$("#new-tag-select").select2({
+						tags: true,
+						placeholder:'Tag name',
+						allowClear: true,
+						data: [""].concat(Object.keys(this.tagColors).filter(x => !this.passage.tags.includes(x))),
+					});
+					$("#new-tag-select").select2("open");
+				}, 1);
 			},
 			hideNew: function () {
 				this.newVisible = !1
@@ -29339,7 +29349,7 @@
 		}
 	})
 }, function (t, e) {
-	t.exports = '<div class="passageTags">\n\t<span class="tags"></span>\n\n\t<button class="subtle" type="button" @click="showNew" v-show="!newVisible"><i class="fa fa-plus"></i>\n\t\x3c!-- L10n: this is the noun form, as in tags you would apply to content. --\x3e\n\t{{ \'Tag\' | say }}\n\t</button>\n\n\t<template v-for="tag in passage.tags" transition="fade-in-out">\n\t\t<div class="tag label label-info {{tagColors[tag]}}">{{ tag }}<button>\n\t\t\t<i class="fa fa-caret-down"></i>\n\t\t\t<tag-menu :tag="tag" :passage="passage" :story-id="storyId"></tag-menu>\n\t\t</button></div>\n\t</template>\n\n\t<span v-show="newVisible">\n\t\t\x3c!-- Using a <form> allows the "required" attribute on the input to be usable. --\x3e\n\t\t<form @submit.prevent="addNew">\n\t\t\t\x3c!-- L10n: A noun, i.e. what a tag is named. --\x3e\n\t\t\t<input type="text" placeholder="{{ \'Tag name\' | say }}" required v-el:new-name>\n\n\t\t\t<button type="button" @click="hideNew">Cancel</button>\n\t\t\t<button type="submit" class="create"><i class="fa fa-check"></i> Add</button>\n\t\t</form>\n\t</span>\n</div>\n'
+	t.exports = '<div class="passageTags">\n\t<span class="tags"></span>\n\n\t<span  class="passage-tag-list"><template v-for="tag in passage.tags" transition="fade-in-out">\n\t\t<div class="tag label label-info {{tagColors[tag]}}">{{ tag }}<button>\n\t\t\t<i class="fa fa-caret-down"></i>\n\t\t\t<tag-menu :tag="tag" :passage="passage" :story-id="storyId"></tag-menu>\n\t\t</button></div>\n\t</template></span>\n\n\t<button class="subtle" type="button" @click="showNew" v-show="!newVisible"><i class="fa fa-plus"></i>\n\t\x3c!-- L10n: this is the noun form, as in tags you would apply to content. --\x3e\n\t{{ \'Tag\' | say }}\n\t</button>\n\n\t<span v-show="newVisible">\n\t\t\x3c!-- Using a <form> allows the "required" attribute on the input to be usable. --\x3e\n\t\t<form @submit.prevent="addNew">\n\t\t\t\x3c!-- L10n: A noun, i.e. what a tag is named. --\x3e\n\t\t\t<!--<input type="text" placeholder="{{ \'Tag name\' | say }}" required v-el:new-name>--><select id="new-tag-select" class="new-tag-select" required v-el:new-name></select>\n\n\t\t\t<button type="button" @click="hideNew">Cancel</button>\n\t\t\t<button type="submit" class="create"><i class="fa fa-check"></i> Add</button>\n\t\t</form>\n\t</span>\n</div>\n'
 }, function (t, e, n) {
 	var r = n(2),
 		i = n(363),
