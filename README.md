@@ -56,6 +56,7 @@ Uses "Twine 2.3.1 Web" as it's base
 ## Known Issues
 - The "gray" colored tag indicator on the passage border doesn't show up initially if it the only tag. TO fix this, first assign it another color, and then re-assign the gray color, or add another tag and then remove it. Once done, it sharts showing up normally.
 - This is a original Twine Issue I discovered while implementing the "tag drop-down" feature. Any tag once added is stored in the "Database", even when all references to it are removed. This might be intended, however, I find it a issue, cluttering up the tag list with unneeded tags. There is apparently a function "cleanUpTagColorsInStory" for it, but I don;t think it is ever called. Thus, a new TODO
+- Sometimes when deleting the tags, an unexpected error would occur. Refreshing the page would fix it, without any data loss. Not sure if it has been fixed, as it happened randomly, only in few instance, and was seen only while making some changes in the JS.
 
 ## TO-DO
 These will be very low-priority changes for me, and hence may never see light of the day. But if I ever get the chance/time to:
