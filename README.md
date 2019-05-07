@@ -37,6 +37,9 @@ Minor customization of the tool [twinejs](https://github.com/klembot/twinejs).
 - Make the content in the editor more *visual*
 - I use Twine to make quick flow chart for easy project management, instead of its intended use, thus these changes help my purpose, while should help others as well
 
+## Known Issues
+- The "gray" colored tag indicator on the passage border doesn't show up initially if it the only tag. TO fix this, first assign it another color, and then re-assign the gray color, or add another tag and then remove it. Once done, it sharts showing up normally.
+
 ## TO-DO
 These will be very low-priority changes for me, and hence may never see light of the day. But if I ever get the chance/time to:
 - Support for keyboard shortcuts in the editor (Maybe even replace the current one with a rich-text editor, like ckeditor)
