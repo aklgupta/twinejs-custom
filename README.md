@@ -18,6 +18,7 @@ Uses "Twine 2.3.1 Web" as it's base
 - "+Tag" button after all tags, in a new line
 ### v0.1
 - Added more colors for the tags
+- Tags colors are visible even in the dark theme
 - The default "gray" tag is shown in the passage block as well, like to other color tags
 - Changed the color for some tags
 - Changed the text color to black for light colored tags 
