@@ -1,3 +1,10 @@
+# Important Announcement
+This repo is being discountinued in favour of the new repo here [aklgupta/twinejs](https://github.com/aklgupta/twinejs)
+
+
+---
+
+
 # twinejs-custom
 Minor customization of the tool [twinejs](https://github.com/klembot/twinejs).
 
