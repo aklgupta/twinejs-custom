@@ -2,21 +2,23 @@
 This repo is being discountinued in favour of the new repo here [aklgupta/twinejs](https://github.com/aklgupta/twinejs)
 
 
+
 ---
 
 
-# twinejs-custom
+
+## twinejs-custom
 Minor customization of the tool [twinejs](https://github.com/klembot/twinejs).
 
 Uses "Twine 2.3.1 Web" as it's base
 
-## Changelog
-### v0.2
+### Changelog
+#### v0.2
 - Added JQuery
 - Added Select2
 - Drop-down list of tags when adding a new tag
 - "+Tag" button after all tags, in a new line
-### v0.1
+#### v0.1
 - Added more colors for the tags
 - Tags colors are visible even in the dark theme
 - The default "gray" tag is shown in the passage block as well, like to other color tags
@@ -32,7 +34,7 @@ Uses "Twine 2.3.1 Web" as it's base
 - Gave the `heading` class a more contrasting color in both themes to increase visibility
 - Due to readability issues, I have converted the minified JS & CSS to prettified JS & CSS
 
-## Screenshots
+### Screenshots
 **Tag Colors**
 
 ![Tag Colors](/Previews/Tag-Colors.png)
@@ -55,18 +57,18 @@ Uses "Twine 2.3.1 Web" as it's base
 
 ![Tag Drop-down](/Previews/tag-dropdown.png)
 
-## Reason/Description
+### Reason/Description
 - I believe that it will help editing much easier, and prevent error
 - Allow more tags color, as the vanilla twine had very limited option
 - Make the content in the editor more *visual*
 - I use Twine to make quick flow chart for easy project management, instead of its intended use, thus these changes help my purpose, while should help others as well
 
-## Known Issues
+### Known Issues
 - The "gray" colored tag indicator on the passage border doesn't show up initially if it the only tag. TO fix this, first assign it another color, and then re-assign the gray color, or add another tag and then remove it. Once done, it sharts showing up normally.
 - This is a original Twine Issue I discovered while implementing the "tag drop-down" feature. Any tag once added is stored in the "Database", even when all references to it are removed. This might be intended, however, I find it a issue, cluttering up the tag list with unneeded tags. There is apparently a function "cleanUpTagColorsInStory" for it, but I don;t think it is ever called. Thus, a new TODO
 - Sometimes when deleting the tags, an unexpected error would occur. Refreshing the page would fix it, without any data loss. Not sure if it has been fixed, as it happened randomly, only in few instance, and was seen only while making some changes in the JS.
 
-## TO-DO
+### TO-DO
 These will be very low-priority changes for me, and hence may never see light of the day. But if I ever get the chance/time to:
 - Support for keyboard shortcuts in the editor (Maybe even replace the current one with a rich-text editor, like ckeditor)
 - Add more tag colors
